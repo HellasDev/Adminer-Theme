@@ -3,14 +3,14 @@
 /*
 One Dark Pro theme for Adminer by George Bereveskos - Hellas Dev
 Based on the Atom One Dark Pro color scheme
-@version 1.0 (Feb 2025)
+@version 1.1 (Feb 2025)
 */
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 * {
   box-sizing: border-box;
   transition: box-shadow 0.1s;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 * :focus {
   box-shadow: 0 0 0 2px rgba(97, 175, 239, 0.6);
@@ -55,7 +55,7 @@ h2,
   background-color: inherit;
   border-bottom: none;
   color: #e06c75;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 .version,
@@ -74,18 +74,11 @@ span.time {
   opacity: 0.6;
 }
 
-#menu p {
-  border-bottom: none;
-}
 #menu .links {
   display: grid;
-  grid: auto/1fr 1fr;
-}
-#menu .links a:last-child {
-  grid-row: 2;
-}
-#menu .links a:nth-of-type(3) {
-  grid-column: 2;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 5px;
+  align-items: center;
 }
 
 #tables {
@@ -99,13 +92,13 @@ span.time {
 }
 
 #content {
-  margin-left: 21em;
+  margin-left: 20em;
   font-size: 1.1em;
 }
 
 #breadcrumb {
   top: 0.8em;
-  left: 19em;
+  left: 20em;
   background-color: inherit;
 }
 
@@ -118,7 +111,7 @@ fieldset,
   background-color: #21252b !important;
   border: 1px solid #3e4451 !important;
   cursor: default;
-  padding: 8px;
+  padding: 12px;
 }
 
 .table .char {
@@ -152,12 +145,12 @@ select,
 input:not(.icon):not([type='checkbox']):not([type='radio']),
 textarea,
 pre[contenteditable] {
-  padding: 6px 10px;
+  padding: 6px 20px;
   background-color: #21252b;
   color: #abb2bf;
   border: 1px solid #4b5263 !important;
-  border-radius: 4px;
-  font-size: 1.1em;
+  border-radius: 10px;
+  font-size: 1.1rem;
 }
 
 select,
@@ -171,7 +164,7 @@ select {
 
 input.icon {
   background-color: #1d1611;
-  border-radius: 2px;
+  border-radius: 10px;
   filter: sepia(1) saturate(5) brightness(0.8);
 }
 input.icon:hover {
@@ -220,7 +213,7 @@ code {
 .footer {
   border: none;
   background-color: #282c34;
-  padding-top: 2em;
+  padding-top: 1rem;
 }
 .footer div {
   background: inherit;
@@ -270,7 +263,7 @@ input[type='radio'] {
   width: 1.2em;
   height: 1.2em;
   border: 1px solid #61afef;
-  border-radius: 2px;
+  border-radius: 5px;
   display: inline-grid;
   place-items: center;
 }
@@ -300,7 +293,7 @@ input[type='checkbox']:checked::before {
 }
 
 input[type='radio'] {
-  border-radius: 9rem;
+  border-radius: 10rem;
 }
 
 .js .checkable .checked td,
